@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "EditorToolbarBP",
+	"Description": "Exposes several user-defined Blueprint events to the toolbar. Useful for quickly accessing common development tasks in BP.",
+	"Category": "Other",
+	"CreatedBy": "InnerLoop LLC",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "EditorToolbarBP",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
