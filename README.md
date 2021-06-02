@@ -16,7 +16,7 @@ An Unreal Engine 4 plugin featuring editor toolbar buttons which call customizab
 + ...a profitable use of my time.
 
 ## Updates
-*6/2/21* - Initial commit. It works, but it isn't pretty.
+*6/2/21* - Initial commit. It works, but it isn't pretty. Right now it only supports two actions, which is barely useful. Next, I'll be combining the actions into a single dropdown menu and expanding the number of available actions. Also exploring functionality for renaming the actions.
 
 ## Requirements
 * **Supported Unreal Engine Versions** - 4.26 *(probably works in most engine versions, but has not been tested)*
@@ -48,5 +48,5 @@ Find out more about InnerLoop LLC at [https://www.innerloopllc.com](https://www.
 ## Legal
 *EditorToolbarBP Plugin* by [ItsNotMeTrustMe *(Brian Edward Hicks)*](mailto:brian@superhockeyball.com) of InnerLoop LLC, 2021<br>
 This plugin was not created by, or in partnership with, Epic Games or their partners/subsidiaries.<br>
-No guarantees are made about anything. Use at your own risk. But please let me know if something breaks, so I can fix it.<br>
+No guarantees are made about anything. Use at your own risk. Please let me know if something breaks, so I can fix it.<br>
 Please drink responsibly.
