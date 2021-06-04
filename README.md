@@ -28,8 +28,8 @@ An Unreal Engine 4 plugin featuring editor toolbar buttons which call customizab
 2) Regenerate project files
 3) Compile engine
 4) Enable the `EditorToolbarBP` plugin in your project
-5) Create a new `EditorToolbarBP` actor and place it in your persistent level
-6) Add the `Editor Toolbar Action` events and script functionality for them<br>
+5) Create a new `ToolbarEvents` actor and place it in your persistent level
+6) Add the `Toolbar Action` events and script functionality for them<br>
 7) Press the buttons on the toolbar to see the results!
 
 ## FAQ / Common Issues
