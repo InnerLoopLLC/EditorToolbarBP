@@ -6,9 +6,6 @@ AEditorToolbarBPActor::AEditorToolbarBPActor(const FObjectInitializer& ObjectIni
 	: Super(ObjectInitializer)
 {
 	PrimaryActorTick.bCanEverTick = false;
-}
-
-void AEditorToolbarBPActor::BeginPlay()
-{
-	Super::BeginPlay();
+	bIsEditorOnlyActor = 1;
+	
 }

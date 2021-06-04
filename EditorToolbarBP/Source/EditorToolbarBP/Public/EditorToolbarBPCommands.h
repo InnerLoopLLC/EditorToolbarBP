@@ -5,9 +5,11 @@
 #include "CoreMinimal.h"
 #include "Framework/Commands/Commands.h"
 #include "EditorToolbarBPStyle.h"
+//#include "EditorToolbarBPStyle.generated.h"
 
 class FEditorToolbarBPCommands : public TCommands<FEditorToolbarBPCommands>
 {
+
 public:
 
 	FEditorToolbarBPCommands()
@@ -18,8 +20,7 @@ public:
 	// TCommands<> interface
 	virtual void RegisterCommands() override;
 
-public:
-	TSharedPtr< FUICommandInfo > PluginAction;
+	TSharedPtr< FUICommandInfo > OpenActionList;
 	TSharedPtr< FUICommandInfo > ToolbarAction1;
 	TSharedPtr< FUICommandInfo > ToolbarAction2;
 };

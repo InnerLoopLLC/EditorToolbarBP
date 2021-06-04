@@ -16,13 +16,26 @@ class FEditorToolbarBPModule : public IModuleInterface
 {
 public:
 
-	/** IModuleInterface implementation */
+	// IModuleInterface implementation 
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
 	
-	/** This function will be bound to Command. */
+	// These functions will be bound to Commands.
 		void ToolbarAction1();
 		void ToolbarAction2();
+
+		/*
+		// These functions will be enabled when the drop down list is functional.
+		// Until then, they'll just clutter up the toolbar.
+		void ToolbarAction3();
+		void ToolbarAction4();
+		void ToolbarAction5();
+		void ToolbarAction6();
+		void ToolbarAction7();
+		void ToolbarAction8();
+		void ToolbarAction9();
+		void ToolbarAction10();
+		*/
 	
 private:
 

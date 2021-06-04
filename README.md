@@ -16,6 +16,7 @@ An Unreal Engine 4 plugin featuring editor toolbar buttons which call customizab
 + ...a profitable use of my time.
 
 ## Updates
+*6/4/21* - Minor improvements. Cleaned up a bunch of stuff and prepared for additional actions (10 total). The events exist, and are shown by default when creating a new actor from the base class. Buttons haven't been added for them yet. That will happen after adding the dropdown menu. Currently calls events all every actor in the level. Might add a warning if multiple actors exist in the world, as it could lead to duplicate or additional actions being triggered concurrently. Also considering adding buttons to auto-generate an actor sub-class, place it in the world, and open the blueprint editor. Would streamline installation and usage.
 *6/2/21* - Initial commit. It works, but it isn't pretty. Right now it only supports two actions, which is barely useful. Next, I'll be combining the actions into a single dropdown menu and expanding the number of available actions. Also exploring functionality for renaming the actions.
 
 ## Requirements
