@@ -16,12 +16,13 @@ An Unreal Engine 4 plugin featuring editor toolbar buttons which call customizab
 + ...a profitable use of my time.
 
 ## Updates
-*6/4/21* - Minor improvements. Cleaned up a bunch of stuff and prepared for additional actions (10 total). The events exist, and are shown by default when creating a new actor from the base class. Buttons haven't been added for them yet. That will happen after adding the dropdown menu. Currently calls events all every actor in the level. Might add a warning if multiple actors exist in the world, as it could lead to duplicate or additional actions being triggered concurrently. Also considering adding buttons to auto-generate an actor sub-class, place it in the world, and open the blueprint editor. Would streamline installation and usage.<br><br>
+*6/8/21* - Commands are now created more efficiently, and can be renamed. Renaming is done via `Windows/Editor.ini`. Instructions below. Added sanity checks to disable the button while in PIE or SIE. Added check to only call events on objects placed in the game world, ignoring objects open in a blueprint editor. Marked commands to be unregistered on module shutdown, which is good for hot-reloading. 10 commands are now functional, though only 2 toolbar buttons exist for now. Action re-naming will be done in the editor eventually.
+*6/4/21* - Minor improvements. Cleaned up a bunch of stuff and prepared for additional actions (10 total). The events exist, and are shown by default when creating a new actor from the base class. Buttons haven't been added for them yet. That will happen after adding the dropdown menu. Currently calls events on all every actor in the level. Might add a warning if multiple actors exist in the world, as it could lead to duplicate or additional actions being triggered concurrently. Also considering adding buttons to auto-generate an actor sub-class, place it in the world, and open the blueprint editor. Would streamline installation and usage.<br><br>
 *6/2/21* - Initial commit. It works, but it isn't pretty. Right now it only supports two actions, which is barely useful. Next, I'll be combining the actions into a single dropdown menu and expanding the number of available actions. Also exploring functionality for renaming the actions.
 
 ## Requirements
-* **Supported Unreal Engine Versions** - 4.26 *(probably works in most engine versions, but has not been tested)*
-* **Platforms** - UE4-Editor Only
+* **Supported Unreal Engine Versions** - `4.26` *(probably works in most engine versions, but has not been tested)*
+* **Platforms** - `Win64` *(might work on other platforms? If you run Linux or Mac, let me know if it works.)*
 
 ## Installation
 1) Place the `EditorToolbarBP` folder in `Engine\Plugins\Marketplace` or your project's `Plugins` folder
@@ -33,10 +34,17 @@ An Unreal Engine 4 plugin featuring editor toolbar buttons which call customizab
 7) Press the buttons on the toolbar to see the results!
 
 ## FAQ / Common Issues
+> #### Can the toolbar buttons or action events be renamed?<br>
+Yep! Names need to be placed in `Windows/Editor.ini` with the following section and format:
+```
+[/Script/EditorToolbarBP.EditorToolbarBPCommands]
+Action_1_Name=ExampleName
+Action_1_Description=ExampleDescription
+Action_2_Name=OtherExampleName
+Action_2_Description=OtherExampleDescription
+```
 > #### So, what should I use this plugin for?<br>
 Whatever you want! As an example, in a project which made heavy use of sequencer (and required each sequence to keep state upon completion) actors were frequently out of position while making editor adjustments. A quick script later and they're all always in the correct spot, with just the push of a button! You're limited only by your imagination (and the scope of blueprint functionality).
-> #### Can the toolbar buttons or action events be renamed?<br>
-Not yet, but that's coming soon!
 > #### Why do I need the actor?<br>
 Convenience! The actor is just an easy way to add blueprint implementable events.
 > #### Does the actor get packaged with my game?<br>
