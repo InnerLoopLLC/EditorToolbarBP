@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0",
+	"VersionName": "1.1",
 	"FriendlyName": "EditorToolbarBP",
 	"Description": "Exposes several user-defined Blueprint events to the toolbar. Useful for quickly accessing common development tasks in BP.",
 	"Category": "Other",

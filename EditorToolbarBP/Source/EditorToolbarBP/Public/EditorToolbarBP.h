@@ -21,12 +21,9 @@ public:
 	virtual void ShutdownModule() override;
 	
 	// These functions will be bound to Commands.
+		void ToolbarAction(uint8 ActionNumber);
 		void ToolbarAction1();
 		void ToolbarAction2();
-
-		/*
-		// These functions will be enabled when the drop down list is functional.
-		// Until then, they'll just clutter up the toolbar.
 		void ToolbarAction3();
 		void ToolbarAction4();
 		void ToolbarAction5();
@@ -35,10 +32,10 @@ public:
 		void ToolbarAction8();
 		void ToolbarAction9();
 		void ToolbarAction10();
-		*/
 	
 private:
 
+	void CreateCommandList();
 	void RegisterMenus();
 
 	TSharedPtr<class FUICommandList> PluginCommands;

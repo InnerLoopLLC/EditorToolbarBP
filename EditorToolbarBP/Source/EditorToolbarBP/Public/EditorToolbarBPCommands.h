@@ -21,6 +21,11 @@ public:
 	virtual void RegisterCommands() override;
 
 	TSharedPtr< FUICommandInfo > OpenActionList;
-	TSharedPtr< FUICommandInfo > ToolbarAction1;
-	TSharedPtr< FUICommandInfo > ToolbarAction2;
+	TSharedPtr< FUICommandInfo > ToolbarActionStub;
+	TArray< TSharedPtr< FUICommandInfo > > ToolbarAction;
+
+private:
+
+	void CreateToolbarActions(uint8 NumberOfActions);
+	void CreateToolBarAction1();	
 };
